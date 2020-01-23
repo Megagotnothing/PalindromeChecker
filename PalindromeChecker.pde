@@ -16,7 +16,34 @@ public void setup()
 }
 public boolean palindrome(String word)
 {
-  //your code here
+  String ans = "";
+
+  word = word.toLowerCase();
+  word.replace(" ","");
+
+  String yeet = "";
+  for(int i = 0; i < word.length(); i++)
+  {
+    if(Character.isLetter(word.charAt(i)))
+    {
+      yeet += word.charAt(i);
+    }
+  }
+
+  word = yeet;
+  
+
+  for(int i = word.length(); i > 0; i--)
+  {
+    ans +=word.charAt(i-1);
+  }
+  if(ans.equals(word))
+  {
+      //System.out.println(ans);
+      return true;
+  }
+    
+   // System.out.println(ans);
   return false;
 }
 public String reverse(String str)
